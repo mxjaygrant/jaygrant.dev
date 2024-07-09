@@ -124,9 +124,20 @@ body>main {
 /* Footer */
 body>footer{
 	background-color: var(--fg-color);
+	color: #fff;
+	display: grid;
+	column-count: 2;
 	font-size: .8em;
 	padding: 1rem;
-	width: 100vw;
+	max-width: 100vw;
+	div {
+		display: inline-grid;
+		grid-area: 1;
+		text-align: start;
+	}
+	div:last-child {
+		text-align: end;
+	}
 }
 
 
