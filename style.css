@@ -138,6 +138,7 @@ body>footer{
 #resume {
 	ul#summary {
 		font-size: 1.15em;
+		text-align: center;
 	}
 
 	ul {
