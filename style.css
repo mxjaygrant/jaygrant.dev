@@ -28,7 +28,7 @@ body {
 	--fg-color: #af08a1;
 	--bg-color: #FFF;
 	--text-color: black;
-	--highlight: #f9f871;
+	--highlight: #ffffb8;
 	--header: #fff7fe;
 }
 
@@ -148,10 +148,22 @@ body>footer{
 	}
 }
 
+#summary {
+	display: grid;
+	grid-template-columns: 3;
+	grid-template-rows: 1;
+	div {
+		grid-area: 1;
+		max-width: 33vw;
+		padding: 0 1em 0 0 ;
+	}
+}
+
 #portfolio {
 	.card {
-		border: 1px solid #CCC;
-		box-shadow: .5em .5em 1rem #dfdfdf;
+		border: 1px solid #efefef;
+		box-shadow: 0 0 1em #f8ebf7;
+		border-radius: .25em;
 		display: grid;
 		grid-template-columns: 2;
 		grid-template-rows: 3;
@@ -168,13 +180,14 @@ body>footer{
 			grid-column: 1;
 			grid-column-end: 3;
 			grid-row: 2;
+			margin: .5em 0;
 
 		}
 	}
 	img {
 		border: 1px solid #666;
 		margin: .5em .5em .5em 0;
-		max-width: 50vw;
+		max-width: 33vw;
 		max-height: 50vh;
 		display: inline-grid;
 		grid-column: 1;
@@ -187,5 +200,5 @@ body>footer{
 }
 
 #contact {
-	min-height: 65vh
+	min-height: 65vh;
 }
