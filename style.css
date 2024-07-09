@@ -79,6 +79,7 @@ body>header{
 			display: flex;
 			box-shadow: 0 .25em 5px #dfdfdf;
 			li {
+
 				flex-grow: 1;
 				list-style-position: inside;
 				list-style-type: none;
@@ -87,12 +88,15 @@ body>header{
 				/* transition: background-color 2s; */
 				a {
 					text-decoration: none;
-					color: #000;
+					color: #FFF;
 				}
 			}
 			li:hover {
-				background-color:#f9f871; 
+				background-color:#f9f871;
 				animation: .5s ease 0s 1 rainbow;
+				a {
+					color: #000 !important;
+				}
 			}
 		}
 	}
@@ -200,5 +204,35 @@ body>footer{
 }
 
 #contact {
-	min-height: 65vh;
+	form {
+		display: grid;
+		grid-template-columns: 2;
+		grid-template-rows: 4;
+		margin: 2em 0 0 0;
+		min-height: 35vh;
+		min-width: 80vw;
+	}
+
+	label {
+		display: inline-grid;
+		grid-column: 1;
+		grid-area: 1;
+		min-width: 10vw;
+		vertical-align: top;
+	}
+
+	input {
+		display: inline-grid;
+		grid-column: 2;
+		grid-area: 2;
+		min-width: 80vw;
+		min-height: 1.5rem;
+	}
+
+	textarea {
+		display: inline-grid;
+		grid-column: 2;
+		min-width: 80vw;
+		min-height: 10rem;
+	}
 }

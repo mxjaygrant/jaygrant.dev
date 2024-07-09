@@ -21,8 +21,22 @@
     <main>
         <section id="contact">
             <h2>Get in Touch</h2>
-            <p>You can contact me directly via email at jay@jaygrant.dev. Whether you have a specific question, want to discuss a project, or need assistance with any matter related to my expertise, I am here to help. I strive to provide personalized attention to each inquiry and ensure that your needs are addressed thoroughly.</p>
-            <p class="highlight">Jay Grant  - jay@jaygrant.dev</p>
+            <p>You can contact me directly via email at <span class="highlight">jay@jaygrant.dev</span>. Whether you have a specific question, want to discuss a project, or need assistance with any matter related to my expertise, I am here to help. I strive to provide personalized attention to each inquiry and ensure that your needs are addressed thoroughly.</p>
+            <form name="contact" netlify>
+                <div>
+                  <label>Name</label><input type="text" name="name" />
+                </div>
+                <div>
+                    <label>Contact</label><input type="email" name="email" />
+                </div>
+                <div>
+                    <label>Message</label><textarea name="message"></textarea>
+                </div>
+                <div>
+                  <button type="submit">Send</button>
+                </div>
+            </form>
+
         </section>    
     </main>
     <footer>
