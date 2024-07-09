@@ -1,0 +1,71 @@
+/* CSS Reset - via Andy Bell https://piccalil.li/blog/a-more-modern-css-reset/
+
+*/
+
+/* Set box handling to border-box */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* Elminate browser controlled margins */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd, ol, ul, li {
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.25;
+    text-size-adjust: none;
+    font-size: 1.25rem;
+  }
+
+/* Site Variables */
+:root {
+    --fg-color: #af08a1;
+    --bg-color: #FFF;
+    --text-color: black;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+/* Header */
+body>header{
+    background-color: var(--fg-color);
+    padding: 1rem;
+    text-align: center;
+    nav {
+        clear: both;
+        display: block;
+        ul {
+            margin: 0;
+            padding: .5em 0;
+            li {
+                display: inline-block;
+                list-style-position: inside;
+                width: 30vw;
+            }
+        }
+    }
+}
+
+body>main {
+    margin: 2rem;
+}
+
+body>main p {
+    margin: .5em 0;
+}
+
+/* Footer */
+body>footer{
+    background-color: var(--fg-color);
+    border: 1px solid red;
+    font-size: .8em;
+    padding: 1rem;
+    width: 100vw;
+}
