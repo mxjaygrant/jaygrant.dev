@@ -1,0 +1,57 @@
+<html>
+<head>
+    <style>
+        :root{
+            --deColor: blue;
+        }
+
+        .colors {
+            border: 1px solid green;
+            height: 10em;
+            width: 10em;
+            background-color: var(--deColor);
+        }
+
+        form {
+            margin: 2rem auto;
+        }
+
+        input {
+            margin: 10px;
+            font-size: 1.5em;
+            text-size-adjust: 125%;
+        }
+
+        input[type="radio"] {
+            height: 2em;
+            width: 2em;
+        }
+
+        #red:clicked ~ .colors {
+           --deColor: red;
+        }
+        #green:checked ~ .colors {
+           --deColor: green !important;
+        }
+        #purple:checked ~ .colors {
+           --deColor: purple !important;
+        }
+
+        .select:active ~ .colors {
+            --deColor: yellow;
+            }
+
+    </style>
+</head>
+<body>
+
+        <button name="scheme" value="red" id="red">Red</button><label for="red">red</label>
+        <button name="scheme" value="green" id="green">Green</button><label for="green">green</label>
+        <button name="scheme" value="purple" id="purple">Purple</button><label for="purple">purple</label>
+
+        <div class="select">red</div>
+
+         <div class="colors" id="colors">&nbsp;</div>
+    </div>
+</body>
+</html>
