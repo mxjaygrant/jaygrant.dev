@@ -6,51 +6,61 @@
 <body>
 	<header>
 		<h1>Big Fancy Header!</h1>
-		<nav><ul>
-			<li><a href="#">Nav 1</a></li>
-			<li><a href="#">Nav 2</a></li>
-			<li><a href="#">Nav 3</a></li>
-		</ul></nav>
+		<nav>
+			<menu>
+				<li><a href="#">Nav 1</a></li>
+				<li><a href="#">Nav 2</a></li>
+				<li><a href="#">Nav 3</a></li>
+			</menu>
+		</nav>
 	</header>
 	<main>
+		<article>
 		<section class="hero">
 			<hgroup>
-				<h1>Examples</h1>
+				<h1>Jay's Clever Framework Name</h1>
 				<p class="lead">Every tag in HTML, styled.</p>
 			</hgroup>
 	
-			<p>This page represents styling for every tag in HTML, as per <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network's HTML web docs</a> and the <a href="https://codepen.io/plfstr/full/zYqQeRw">HTML Tags Memory Test</a>.</p>
-			<p>Because I end up rewriting the same CSS every project and it's time just to turn it into my own framework.</p>
+			<p>This page represents 113 non-depreciated tags in HTML, as per <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network's HTML web docs</a>. Some representation of visual content based on Bootstrap's cheatsheet.</p>
+			<p>The only tag not represented is the generic container tag &lt;div&gt;. CSS specificity allows me to avoid the generic container entirely, allowing a nearly clean slate to build upon.</p>
+			<p>I end up rewriting the same CSS and HTML every project and it's time to turn it into my own framework.</p>
+			
+			<h4>Assumptions</h4>
+			<ul>
+				<li>Browser defaults aren't inherently bad.</li>
+				<li>Separate style from content where ever possible.</li>
+				<li>Use classes and ids to describe content.</li>
+				<li>Use CSS to describe design.</li>
+				<li>Progressive enhancement and graceful degradation are key.</li>
+				<li>Build for <em>everyone</em>.</li>
+			</ul>
 		</section>
 
 		<aside>
 			<nav>
-				<ul class="decorNone">
-					<li>Headings</li>
-					<li>Typography & Text</li>
-					<li>Lists</li>
-					<li>Tables</li>
-				</ul>
+				<menu>
+					<li><a href="#headings">Headings</a></li>
+					<li><a href="#typography">Typography & Text</a></li>
+					<li><a href="#lists">Lists</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#media">Media</a></li>
+					<li><a href="#forms">Forms</a></li>
+				</menu>
+				<search>Search</search>
 			</nav>
 		</aside>
-
-		<section id="headings">
-			<h1>Headings</h1>
-			<h2 style="border: none;">Heading 2</h2> <!-- sloppy but effective-->
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
-		</section>
 
 		<section id="typography">
 			<h2>Typography</h2>
 			<p>This is a paragraph with inline elements. It has <del>deletions</del> and <s>strike-throughs</s>, <ins>insertions</ins> and <u>underlined text</u>. Some text is <em>emphasized</em> or <i>italicized</i>, other text is <strong>strong</strong> or <b>bold</b>. Some text is <mark>marked</mark>. There are <abbr title="abbreviations">abbr</abbr> and <dfn>definitions</dfn>. <small>(Small text is small.)</small></p>
 
-			<p><pre>This is pre-
+			<p><pre>This is pre-       
 			styled text.</pre></p>
 
-			<p><kbd>This is keyboard input</kbd> and this <code>is a code sample</code> with a <var>variable.</var></p>
+			<p><kbd>This is keyboard input</kbd> and a <var>variable</var>.</p> 
+				
+			<code>This is a code sample</code>
 
 			<p><samp>This is sample output</samp></p>
 
@@ -64,13 +74,29 @@
 				<cite>--supposedly</cite>
 			</blockquote>
 
-			<h3>Bi-Directional Languages</h3>
-			This is Arabic: <bdi>هذا باللغة العربية</bdi><br>
-			<bdo dir="rtl">This is Arabic: هذا باللغة العربية</bdo>
+			<h3>Right-To-Left Languages</h3>
+			"This is Arabic" using the bi-directional isolate tag &lt;bdi&gt;: <bdi>هذا باللغة العربية</bdi><br>
+			"This is Arabic" using the bi-directional override tag &lt;bdo&gt;: <bdo dir="rtl">هذا باللغة العربية</bdo>
 
-			<h3>East Asian</h3>
-			<p>This is Chinese (simplified): <ruby> 这是中文 <rp>(</rp><rt>Zhè shì zhōng wén</rt><rp>)</rp> </ruby></p>
+			<h3>East Asian Languages</h3>
+			<p>"This is Chinese (simplified)" using &lt;ruby&gt;:  <ruby> 这是中文 <rp>(</rp><rt>Zhè shì zhōng wén</rt><rp>)</rp> </ruby></p>
 
+			<h3>Miscellany</h3>
+
+			<math>
+				MathML
+			</math>
+		</section>
+
+		<section id="headings">
+			<h2>Headings</h2>
+
+			<h1>Heading 1</h1>
+			<h2 style="border: none;">Heading 2</h2> <!-- sloppy but effective-->
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
 		</section>
 
 		<section id="lists">
@@ -96,20 +122,41 @@
 		<section id="tables">
 			<h2>Tables</h2>
 			<table>
+				<caption>Table Caption</caption>
 				<thead>
 					<tr>
 						<th colspan="2">Table Header</th>
 					</tr>
 				</thead>
 				<tbody>
+					<colgroup>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+						</tr>					
+					</colgroup>
 					<tr>
-						<th>Column 1</th>
-						<th>Column 2</th>
+						<td>Element 1</td>
+						<td>Element 2</td>
 					</tr>
 					<tr>
 						<td>Element 1</td>
 						<td>Element 2</td>
 					</tr>
+					<tr>
+						<td>Element 1</td>
+						<td>Element 2</td>
+					</tr>
+					<tr>
+						<td>Element 1</td>
+						<td>Element 2</td>
+					</tr>
+					<tr>
+						<td>Element 1</td>
+						<td>Element 2</td>
+					</tr>
+
+
 					<tr>
 						<td colspan="2">Element 3</td>
 					</tr>
@@ -123,41 +170,44 @@
 		</section>
 		<section id="Media">
 			<h2>Media</h2>
-			<h3>Pictures &amp; Figures</h3>
+			<p>Introduces: figure, picture, svg</p>
+			<h3>Images</h3>
 
 				<figure>
-					<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%" height="250">
-						<style>
-							rect {
-								fill: var(--fg-color);
-							}
-							text {
-								fill: var(--bg-color);
-							}
-						</style>
-						<title>Placeholder</title>
-						<rect width="100%" height="100%"></rect>
-						<text x="50%" y="50%" dy=".3em">Responsive Image</text>
-					</svg>
-					<!--<img class="imgResponsive" src="images/desktop.svg" />-->
+					<picture>
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%" height="250">
+							<style>
+								rect {
+									fill: var(--fg-color);
+								}
+								text {
+									fill: var(--bg-color);
+								}
+							</style>
+							<title>Placeholder</title>
+							<rect width="100%" height="100%"></rect>
+							<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+						</svg>
+					</picture>
 					<figcaption>A full-width responsive SVG</figcaption>
 				</figure>
 
 				<figure>
-					<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="200">
-						<style>
-							rect {
-								fill: var(--fg-color);
-							}
-							text {
-								fill: var(--bg-color);
-							}
-						</style>
-						<title>Placeholder</title>
-						<rect width="100%" height="100%"></rect>
-						<text x="50%" y="50%" dy=".3em">Responsive Image</text>
-					</svg>
-					<!--<img class="imgResponsive" src="images/desktop.svg" />-->
+					<picture>
+						<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="200">
+							<style>
+								rect {
+									fill: var(--fg-color);
+								}
+								text {
+									fill: var(--bg-color);
+								}
+							</style>
+							<title>Placeholder</title>
+							<rect width="100%" height="100%"></rect>
+							<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+						</svg>
+					</picture>
 					<figcaption>A 200x200 image thumbnail</figcaption>
 				</figure>
 				
@@ -167,28 +217,150 @@
 			<p><small>Yeah I can't believe they haven't been depreciated either.</small></p>
 			<map name="imgmap">
 				<area>
-				<img > 
-				<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" usemap="imgmap" width="200" height="200">
-					<style>
-						rect {
-							fill: var(--fg-color);
-						}
-						text {
-							fill: var(--bg-color);
-						}
-					</style>
-					<title>Placeholder</title>
-					<rect width="100%" height="100%"></rect>
-					<text x="50%" y="50%" dy=".3em">Responsive Image</text>
-				</svg>
+				<picture>
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" usemap="imgmap" width="200" height="200">
+						<style>
+							rect {
+								fill: var(--fg-color);
+							}
+							text {
+								fill: var(--bg-color);
+							}
+						</style>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%"></rect>
+						<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+					</svg>
+				</picture>
 			</map>
 			<h3>Audio</h3>
+				<figure>
+					<figcaption>This is the audio tag</figcaption>
+					<audio controls src=""></audio>
+					<source></source>
+					<a href=""> Download audio </a>
+				</figure>
 			<h3>Video</h3>
+			<video controls src="">
+				<track default kind="captions" srclang="en" src="" />
+				Download.
+			  </video>
+
+			<h3>Generic Containers</h3>
+			  <p>Embed:</p>
+			  <embed type="video/quicktime" src="movie.mov" width="640" height="480" title="Title of my video" />
+
+			  <object></object>
+
+			  <canvas></canvas>
+
 		</section>
+		<section>
+			<h2>Nesting Content</h2>
+			<p>iframe</p>
+			<iframe id="inlineFrameExample"
+				title="Inline Frame Example"
+				width="300"
+				height="200"
+				src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+			</iframe>
+
+			<object></object>
+
+			<canvas></canvas>
+
+			<noscript></noscript>
+		</section>
+		<section class="forms">
+			<h2>Forms</h2> 
+			<form>
+				<input type="button"></input><label>Input: Button</label><br>
+				<input type="checkbox"></input><label>Input: Checkbox</label><br>
+				<input type="color"></input><label>Input: Color</label><br>
+				<input type="date"></input><label>Input: Date</label><br>
+				<input type="datetime"></input><label>Input DateTime</label><br> <!-- depreciated -->
+				<input type="datetime-local"></input><label>Input DateTime Local</label><br>
+				<input type="email"></input><label>Input Email</label><br>
+
+				<input type="hidden"></input><label>Input: Hidden</label><br>
+				<input type="image"></input><label>Input: Image</label><br>
+				<input type="month"></input><label>Input: Month</label><br>
+				<input type="number"></input><label>Input: Number</label><br>
+				<input type="password"></input><label>Input: Password</label><br>
+				<input type="radio"></input><label>Input: Radio</label><br>
+				<input type="reset"></input><label>Input: Reset</label><br>
+				<input type="search"></input><label>Input: Search</label><br>
+				<input type="submit"></input><label>Input: Submit</label><br>
+				<input type="tel"></input><label>Input: Tel</label><br>
+				<input type="text"></input><label>Input: Text</label><br>
+				<input type="time"></input><label>Input: Time</label><br>
+				<input type="url"></input><label>Input: URL</label><br>
+				<input type="week"></input><label>Input: Week</label><br>
+				<hr>
+
+				<fieldset>
+					<legend>This is a Ranged Slider</legend>
+					<input type="range" list="rangeMarks" min="0" max="5" id="mark" name="mark">
+					<datalist id="rangeMarks">
+						<option value="1"></option>
+						<option value="2"></option>
+						<option value="3"></option>
+						<option value="4"></option>
+					</datalist>
+					<label for="mark">Range with Marks<sup>1</sup></label>
+
+					<output>42</output>
+				</fieldset>
+
+				<fieldset>
+					<select>
+						<optgroup>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</optgroup>
+					</select>
+
+					<button>Button</button>
+
+					<meter></meter>
+				</fieldset>
+
+				<fieldset>
+					<input type="file"></input><label>Input: File</label><br>
+					<progress></progress>
+				</fieldset>
+
+				<fieldset>
+					<textarea>
+
+					</textarea>
+				</fieldset>
+			</form>
+		</section>
+		<section id="">
+			<h2>Components</h2>			
+			<details>
+				<summary>Details</summary>
+				<p>Interface elements, aren't they neat!</p>
+			</details>
+
+			<p>Click to see a dialog box</p>
+			<dialog open>
+				<p>This is a dialog box</p>
+				<form method="dialog">
+					<button>Ok</button>
+				</form>
+			</dialog>
+			<h3>Web Components</h3>
+			template slot
+		</section>
+	</article>
 	</main>
 	<footer>
-		This is a footer!
+		<p>1. Having built one of these here range sliders in 2003 standards, do you have any idea <strong>how good</strong> how good modern developers have it?! &lt;old&gt;</p>
 	</footer>
+
 </body>
 </html>
 
@@ -200,49 +372,17 @@
   "style",
 
   HTML body elements 
-  "article", /* not included
-  "search", /* not included
-  "div",
+  "div", /* not included
   
+  Text
 
   Media
-  "audio",
-  "source",
- 
-  "track",
-  "video",
-  "embed",
-  "iframe",
   "object",
-  "picture",
   "canvas",
   "noscript",
-  "caption",
-  * "col",
-  * "colgroup",
 
-  Forms 
-  "button",
-  * "datalist",
-  "option",
-  "fieldset",
-  "label",
-  "form",
-  "input",
-  * "legend",
-  * "meter",
-  "optgroup",
-  "select",
-  "output",
-  "progress",
-  "textarea",
-  "details",
-  * "dialog",
-  * "menu",
-  "summary",
-  * "slot",
- *  "template",
-  "svg",
-  "math"
+  Tables
+  * "col",
+ 
   
   -->
