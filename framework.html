@@ -1,0 +1,248 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+	<header>
+		<h1>Big Fancy Header!</h1>
+		<nav><ul>
+			<li><a href="#">Nav 1</a></li>
+			<li><a href="#">Nav 2</a></li>
+			<li><a href="#">Nav 3</a></li>
+		</ul></nav>
+	</header>
+	<main>
+		<section class="hero">
+			<hgroup>
+				<h1>Examples</h1>
+				<p class="lead">Every tag in HTML, styled.</p>
+			</hgroup>
+	
+			<p>This page represents styling for every tag in HTML, as per <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network's HTML web docs</a> and the <a href="https://codepen.io/plfstr/full/zYqQeRw">HTML Tags Memory Test</a>.</p>
+			<p>Because I end up rewriting the same CSS every project and it's time just to turn it into my own framework.</p>
+		</section>
+
+		<aside>
+			<nav>
+				<ul class="decorNone">
+					<li>Headings</li>
+					<li>Typography & Text</li>
+					<li>Lists</li>
+					<li>Tables</li>
+				</ul>
+			</nav>
+		</aside>
+
+		<section id="headings">
+			<h1>Headings</h1>
+			<h2 style="border: none;">Heading 2</h2> <!-- sloppy but effective-->
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</section>
+
+		<section id="typography">
+			<h2>Typography</h2>
+			<p>This is a paragraph with inline elements. It has <del>deletions</del> and <s>strike-throughs</s>, <ins>insertions</ins> and <u>underlined text</u>. Some text is <em>emphasized</em> or <i>italicized</i>, other text is <strong>strong</strong> or <b>bold</b>. Some text is <mark>marked</mark>. There are <abbr title="abbreviations">abbr</abbr> and <dfn>definitions</dfn>. <small>(Small text is small.)</small></p>
+
+			<p><pre>This is pre-
+			styled text.</pre></p>
+
+			<p><kbd>This is keyboard input</kbd> and this <code>is a code sample</code> with a <var>variable.</var></p>
+
+			<p><samp>This is sample output</samp></p>
+
+			<p>This is <data>data</data><sup>superscript!</sup> and this is a <time>timestring</time><sub>subscript</sub>. </p>
+
+			<p>File your <span>complaints</span> at this address:
+			<address>100 NotReal Ln<br>Fakeville, OZ 99999<br><a href="mailto:">mail@noone.fake</a></address>
+			</p>
+
+			<blockquote>This is a quotation in a blockquote: <q>Someone said something, once.</q> 
+				<cite>--supposedly</cite>
+			</blockquote>
+
+			<h3>Bi-Directional Languages</h3>
+			This is Arabic: <bdi>هذا باللغة العربية</bdi><br>
+			<bdo dir="rtl">This is Arabic: هذا باللغة العربية</bdo>
+
+			<h3>East Asian</h3>
+			<p>This is Chinese (simplified): <ruby> 这是中文 <rp>(</rp><rt>Zhè shì zhōng wén</rt><rp>)</rp> </ruby></p>
+
+		</section>
+
+		<section id="lists">
+			<h2>Lists</h2>
+			<ul>Unordered List
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+		
+			<ol>Ordered List
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+		
+			<dl>Definition List
+				<dt>Term</dt>
+				<dd>Definition</dd>
+			</dl>
+		</section>
+
+		<section id="tables">
+			<h2>Tables</h2>
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Table Header</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Column 1</th>
+						<th>Column 2</th>
+					</tr>
+					<tr>
+						<td>Element 1</td>
+						<td>Element 2</td>
+					</tr>
+					<tr>
+						<td colspan="2">Element 3</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="2">Table Footer</th>
+					</tr>
+				</tfoot>
+			</table>   
+		</section>
+		<section id="Media">
+			<h2>Media</h2>
+			<h3>Pictures &amp; Figures</h3>
+
+				<figure>
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%" height="250">
+						<style>
+							rect {
+								fill: var(--fg-color);
+							}
+							text {
+								fill: var(--bg-color);
+							}
+						</style>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%"></rect>
+						<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+					</svg>
+					<!--<img class="imgResponsive" src="images/desktop.svg" />-->
+					<figcaption>A full-width responsive SVG</figcaption>
+				</figure>
+
+				<figure>
+					<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" width="200" height="200">
+						<style>
+							rect {
+								fill: var(--fg-color);
+							}
+							text {
+								fill: var(--bg-color);
+							}
+						</style>
+						<title>Placeholder</title>
+						<rect width="100%" height="100%"></rect>
+						<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+					</svg>
+					<!--<img class="imgResponsive" src="images/desktop.svg" />-->
+					<figcaption>A 200x200 image thumbnail</figcaption>
+				</figure>
+				
+
+				
+			<h3>Image Maps</h3>
+			<p><small>Yeah I can't believe they haven't been depreciated either.</small></p>
+			<map name="imgmap">
+				<area>
+				<img > 
+				<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive Image" preserveAspectRatio="xMidYMid slice" focusable="false" usemap="imgmap" width="200" height="200">
+					<style>
+						rect {
+							fill: var(--fg-color);
+						}
+						text {
+							fill: var(--bg-color);
+						}
+					</style>
+					<title>Placeholder</title>
+					<rect width="100%" height="100%"></rect>
+					<text x="50%" y="50%" dy=".3em">Responsive Image</text>
+				</svg>
+			</map>
+			<h3>Audio</h3>
+			<h3>Video</h3>
+		</section>
+	</main>
+	<footer>
+		This is a footer!
+	</footer>
+</body>
+</html>
+
+<!-- "html",
+ HTML Headers
+  "base",
+  "meta",
+  "script",
+  "style",
+
+  HTML body elements 
+  "article", /* not included
+  "search", /* not included
+  "div",
+  
+
+  Media
+  "audio",
+  "source",
+ 
+  "track",
+  "video",
+  "embed",
+  "iframe",
+  "object",
+  "picture",
+  "canvas",
+  "noscript",
+  "caption",
+  * "col",
+  * "colgroup",
+
+  Forms 
+  "button",
+  * "datalist",
+  "option",
+  "fieldset",
+  "label",
+  "form",
+  "input",
+  * "legend",
+  * "meter",
+  "optgroup",
+  "select",
+  "output",
+  "progress",
+  "textarea",
+  "details",
+  * "dialog",
+  * "menu",
+  "summary",
+  * "slot",
+ *  "template",
+  "svg",
+  "math"
+  
+  -->
