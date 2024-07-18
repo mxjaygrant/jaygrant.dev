@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img"  viewBox="0 0 500 500">
+	<style>
+		circle { 
+			stroke: #f2f2f2; 
+			stroke-width: 12px;
+
+		}                     
+		circle.outer {
+			stroke-width: 25px;
+			filter: drop-shadow( 7px 5px 10px rgba(0, 0, 0, .7));
+		} 
+
+	</style>
+	<circle class="outer" cx="210" cy="210" r="200" fill="#eb1b83" stroke="white"></circle>
+	<circle cx="201" cy="237" r="162" fill="#ff5764" ></circle>
+	<circle cx="185" cy="255" r="135" fill="#ff904e"></circle>
+	<circle cx="164" cy="269" r="108" fill="#ffc64e"></circle>
+	<circle cx="140 " cy="280" r="85" fill="#f9f871"></circle> 
+
+</svg>

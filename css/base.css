@@ -48,8 +48,6 @@ main {
 	padding: 0 2em;
 }
 
-
-
 footer {
 	background-color: light-dark(var(--fg-color), var(--bg-color));
 	color: light-dark(var(--bg-color), var(--fg-color));
@@ -118,9 +116,12 @@ hgroup {
 p {
 	margin: .5em 0;
 }
+/* (lch(from var(--fg-color) calc(l + 50) c h)) */
 
 blockquote {
-	background-color: light-dark(var(--fg-color), var(--bg-color));
+	background-color: light-dark(
+		lch(from var(--fg-color) calc(l + 33) c h), 
+		lch(from var(--bg-color) calc(l - 33) c h));
 	color: light-dark(var(--bg-color), var(--fg-color));
 	margin: 2em 1em;
 	padding: .5em;
@@ -248,8 +249,8 @@ header {
 		display: grid;
 		aside {
 			grid-column: 2;
-			background-color: var(--fg-color);
-			border-radius: 1em;
+			background-color: lch(from var(--fg-color) calc(l + 50) c h);
+			border-radius: .3em;
 			color: var(--bg-color);
 			padding: 1em;
 			menu>li>a{
