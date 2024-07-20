@@ -2,14 +2,14 @@
 
 /* Site Variables */
 :root {
-	--fg-color: #af08a1;
+	--primary-color: hsl(305, 91%, 36%);
 	--bg-color: #fff7fe;
 	--text-color: black;
 	--highlight: #ffffb8;
 }
 
 @keyframes rainbow{
-	0%    { background-color: var(--fg-color); }
+	0%    { background-color: var(--primary-color); }
 	12.5% { background-color: #eb1b83;}
 	25%   { background-color: #ff5764}
 	37.5% { background-color: #ff5764;}
@@ -32,9 +32,6 @@ body>header{
 	nav {
 		ul {
 			box-shadow: 0 .25em 5px #dfdfdf;
-			li {
-				/* transition: background-color 2s; */
-			}
 			li:hover {
 				background-color:#f9f871;
 				animation: .5s ease 0s 1 rainbow;

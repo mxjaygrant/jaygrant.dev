@@ -1,26 +1,13 @@
 /* typography, basic elements,  components, combined components, layouts */
 
-/* CSS Reset - via Andy Bell https://piccalil.li/blog/a-more-modern-css-reset/ */
-
-/* Set box handling to border-box */
-*, *::before, *::after{
-	box-sizing: border-box;
-}
-
-/* Eliminate browser controlled margins */
-body, h1, h2, h3, h4, h5, h6, p,
-figure, blockquote, dl, dd, ol, ul, li {
-	margin: 0;
-	padding: 0;
-}
+@import url('reset.css');
+@import url('colors.css');
 
 /* Set root level values and variables */
 :root {
+	color-scheme: light dark;
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
-	--fg-color: black;
-	--bg-color: white;
-	--text-color: black;
-	--highlight: #ffff00;
+
   }
 
 @font-face {
@@ -31,26 +18,29 @@ figure, blockquote, dl, dd, ol, ul, li {
 /* Body Tag */
 
 body {
-	line-height: 1.3em;
 	display: grid;
+	color-scheme: light;
+	background-color: var(--page-color);
+	line-height: 1.3em;
 }
 
 /* Basic Layout Elements */
 
 header {
 	text-align: center;
-	background-color: light-dark(var(--fg-color), var(--bg-color));
-	color: light-dark(var(--bg-color), var(--fg-color));
+	background-color: light-dark(var(--primary-color), var(--primary-color-dark));
+	color: var(--text-color-inverse);
 }
 
 main {
+	color: var(--text-color);
 	margin: 2rem auto;
 	padding: 0 2em;
 }
 
 footer {
-	background-color: light-dark(var(--fg-color), var(--bg-color));
-	color: light-dark(var(--bg-color), var(--fg-color));
+	background-color: light-dark(var(--primary-color), var(--primary-color-dark));
+	color: var(--text-color-inverse);
 	font-size: .8em;
 	max-width: 100vw;
 	padding: 1rem;
@@ -62,67 +52,62 @@ footer {
 
 /* Elements */
 
-img {
+/* Image Elements */
+
+figure {
+	display: inline-flex;
+	flex-wrap: wrap;
+;
+}
+
+figcaption {
+
+	display: inline-flex;
+	flex-wrap: wrap;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+picture, img {
+	display: inline-flex;
+	flex-wrap: wrap;
 	max-width: 100vw;
 	max-height: 100vh;
 }
 
 hr {
-	border: 1px solid black;
+	border: 1px solid var;
 }
 
 
 /* Elements: Headings */ 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Lato-Bold, Roboto, Arial, Helvetica, sans-serif;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	line-height: 1.5em;
 	margin: .5em 0;
 }
 
-h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2em;
-}
-
-h3 {
-	font-size: 1.75em;
-}
-
-h4 {
-	font-size: 1.5em;
-}
-
-h5 {
-	font-size: 1.25em;
-}
-
-h6 {
-	font-size: 1.15em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.15em; }
 
 hgroup {
-	p{
-		font-size: 1.25em;
-	}
+	p{ font-size: 1.25em; } 
 }
 
 /* Elements: Block Text */
 
-p {
-	margin: .5em 0;
-}
-/* (lch(from var(--fg-color) calc(l + 50) c h)) */
+p {	margin: .5em 0; }
 
 blockquote {
-	background-color: light-dark(
-		lch(from var(--fg-color) calc(l + 33) c h), 
-		lch(from var(--bg-color) calc(l - 33) c h));
-	color: light-dark(var(--bg-color), var(--fg-color));
+	background-color: light-dark(var(--primary-color-dark), var(--primary-color-light));
+	color: var(--text-color-inverse);
 	margin: 2em 1em;
 	padding: .5em;
 }
@@ -136,12 +121,8 @@ ul, ol, dl {
 }
 
 dl {
-	dt {
-		font-weight: bold;
-	}
-	dd {
-		font-style: italic;
-	}
+	dt { font-weight: bold; }
+	dd { font-style: italic; }
 }
 
 menu {
@@ -162,49 +143,37 @@ menu {
 
 /* Elements: Inline Text */
 
-abbr:hover {
-	text-decoration: dotted; 
-} 
+abbr:hover { text-decoration: dotted; } 
 
-b, strong {
-	font-weight: bold;
-}
+b, strong { font-weight: bold; }
 
-i, em {
-	font-style: italic;
-}
+i, em { font-style: italic; }
 
-u, ins {
-	text-decoration: underline;
-}
+u, ins { text-decoration: underline; }
 
-mark {
-	background-color: #ffff00;
-}
+mark { background-color: var(--highlight); }
 
-small {
-	font-size: .75em;
-}
+small { font-size: .75em; }
 
 /* Elements: Tables */
 
 table {
 	border: 1px solid;
-	border-color: light-dark(var(--fg-color), var(--bg-color));
+	border-color: light-dark(var(--primary-color-dark), var(--primary-color-light));
 	margin: 0;
 	thead {
-		background-color: light-dark(var(--fg-color), var(--bg-color));
-		color: light-dark(var(--bg-color), var(--fg-color));
+		background-color: light-dark(var(--primary-color), var(--bg-color));
+		color: light-dark(var(--bg-color), var(--primary-color));
 		padding: .25em;
 	}
 	tfoot {
-		background-color: light-dark(var(--fg-color), var(--bg-color));
-		color: light-dark(var(--bg-color), var(--fg-color));
+		background-color: light-dark(var(--primary-color), var(--bg-color));
+		color: light-dark(var(--bg-color), var(--primary-color));
 		padding: .25em;
 	}
 	th, td {
 		border: 1px solid;
-		border-color: light-dark(var(--fg-color), var(--bg-color));
+		border-color: light-dark(var(--primary-color), var(--bg-color));
 		margin: 0;
 		padding: .25em
 	}
@@ -226,15 +195,15 @@ header {
 				min-width: calc(100%/4); /* todo */
 				text-indent: 0;
 				a {
-					color: light-dark(var(--bg-color), var(--fg-color));
+					color: light-dark(var(--bg-color), var(--primary-color));
 					display: inline-block;
 					padding: .5em;
 					text-decoration: none;
 					width: 100%;
 				}
 				a:hover {
-					background-color: light-dark(var(--bg-color), var(--fg-color));
-					color: light-dark(var(--fg-color), var(--bg-color));
+					background-color: light-dark(var(--bg-color), var(--primary-color));
+					color: light-dark(var(--primary-color), var(--bg-color));
 				}
 			}
 		}
@@ -249,7 +218,7 @@ header {
 		display: grid;
 		aside {
 			grid-column: 2;
-			background-color: lch(from var(--fg-color) calc(l + 50) c h);
+			background-color: light-dark(var(--primary-color-light), var(--primary-color-dark));
 			border-radius: .3em;
 			color: var(--bg-color);
 			padding: 1em;
@@ -279,5 +248,5 @@ header {
 /* Design */
 
 section>h2{
-	border-bottom: 1px solid var(--fg-color);
+	border-bottom: 1px solid var(--primary-color);
 }

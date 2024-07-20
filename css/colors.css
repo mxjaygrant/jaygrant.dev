@@ -1,0 +1,33 @@
+/* color theming mathematics: https://una.im/css-color-theming/
+/* general schooling on lch: https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
+/* helpful lch color pickers: https://css.land/lch/ https://lch.oklch.com/
+/* hint: hsl and lch share two of the same channels!
+
+/* todo: accessibility with conditional contrast https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/ */
+
+:root {
+	--primary-color: lch(60 100 330);
+	--page-color: light-dark(rgb(255, 255, 255), #111);
+	--text-color: light-dark(black, white);
+	--text-color-inverse: light-dark(white, black);
+	--highlight: #ffff00;
+
+	--primary-color-light: lch(from var(--primary-color) calc(l + 50) calc(c - 45) h); 
+	--primary-color-dark: lch(from var(--primary-color) calc(l - 50) calc(c + 45) h);
+	--primary-color-neutral: lch(from var(--primary-color) l calc(c - 132) h);
+
+	--primary-color-compliment: lch(from var(--primary-color) l c calc(h - 180));
+	--primary-color-compliment-light: lch(from var(--primary-color-compliment) calc(l + 50) calc(c - 45) h);
+	--primary-color-compliment-dark: lch(from var(--primary-color-compliment) calc(l - 50) calc(c + 45) h);
+	--primary-color-compliment-neutral: lch(from var(--primary-color-compliment) l calc(c - 132) h);
+
+	--primary-color-tetrad1: lch(from var(--primary-color) l c calc(h - 120));
+	--primary-color-tetrad1-light:lch(from var(--primary-color-tetrad1) calc(l + 50) calc(c - 45) h);
+	--primary-color-tetrad1-dark: lch(from var(--primary-color-tetrad1) calc(l - 50) calc(c + 45) h);
+	--primary-color-tetrad1-neutral: lch(from var(--primary-color-tetrad1) l calc(c - 132) h);
+
+	--primary-color-tetrad2: lch(from var(--primary-color) l c calc(h - 240)); 
+	--primary-color-tetrad2-light:lch(from var(--primary-color-tetrad2) calc(l + 50) calc(c - 45) h);
+	--primary-color-tetrad2-dark: lch(from var(--primary-color-tetrad2) calc(l - 50) calc(c + 45) h);
+	--primary-color-tetrad2-neutral: lch(from var(--primary-color-tetrad2) l calc(c - 132) h);
+}
