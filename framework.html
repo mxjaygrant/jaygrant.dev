@@ -19,6 +19,26 @@
 	</header>
 	<main>
 		<article>
+		<aside>
+			<nav>
+				<menu>
+					<li><a href="#typography">Color</a></li>
+					<li><a href="#typography">Typography</a></li>
+					<li><a href="#headings">Headings</a></li>
+					<li><a href="#lists">Lists</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#media">Media</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<li><a href="#components">Widgets</a></li>
+				</menu>
+				<search>
+					<input type="search" />
+				</search>
+				<p><button onclick="switchColorTheme();" title="Switch Theme">Switch Light/Dark</button></p>
+				<p><input type="color" id="colorPicker" /><label for="colorPicker">Change Theme Color</label></p>
+			</nav>
+		</aside>
+
 		<section class="hero">
 			<hgroup>
 				<h1>Jay's Clever Framework Name</h1>
@@ -41,31 +61,12 @@
 
 			<h4>To-Do</h4>
 			<ul>
+				<li>Ensure proper contrast on text in header/footer</li>
 				<li>Add aria to all controls</li>
 				<li>Fill in media section with media</li>
-				<li>Style forms, components</li>
-				<li>Fix image bug</li>
+				<li>Style media, forms, components</li>
 			</ul>
 		</section>
-
-		<aside>
-			<nav>
-				<menu>
-					<li><a href="#typography">Color</a></li>
-					<li><a href="#typography">Typography</a></li>
-					<li><a href="#headings">Headings</a></li>
-					<li><a href="#lists">Lists</a></li>
-					<li><a href="#tables">Tables</a></li>
-					<li><a href="#media">Media</a></li>
-					<li><a href="#forms">Forms</a></li>
-					<li><a href="#components">Widgets</a></li>
-				</menu>
-				<search>
-					<input type="search" />
-				</search>
-				<button onclick="switchColorTheme();" title="Switch Theme">Switch Theme</button>
-			</nav>
-		</aside>
 
 		<section id="color">
 			<h2>Color</h2>
@@ -74,12 +75,12 @@
 			<figure>
 				<figcaption>Primary Color and Variants</figcaption>
 				<picture>
-					<svg height="350" width="300"> 
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213 213" width="225" height="225"> 
 						<style>circle { stroke: #999; stroke-width: 2px; }</style>
-						<circle style="fill: var(--primary-color);" cx="100" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-light);" cx="250" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-dark);" cx="100" cy="250" r="50"></circle>
-						<circle style="fill: var(--primary-color-neutral);" cx="250" cy="250" r="50"></circle>
+						<circle style="fill: var(--primary-color);" cx="51" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-light);" cx="161" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-dark);" cx="51" cy="161" r="50"></circle>
+						<circle style="fill: var(--primary-color-neutral);" cx="161" cy="161" r="50"></circle>
 					</svg>
 				</picture>
 			</figure>
@@ -87,12 +88,12 @@
 			<figure>
 				<figcaption>Complimentary Color and Variants</figcaption>
 				<picture>
-					<svg height="350" width="300"> 
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213 213" width="225" height="225"> 
 						<style>circle { stroke: #999; stroke-width: 2px; }</style>
-						<circle style="fill: var(--primary-color-compliment);" cx="100" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-compliment-light);" cx="250" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-compliment-dark);" cx="100" cy="250" r="50"></circle>
-						<circle style="fill: var(--primary-color-compliment-neutral);" cx="250" cy="250" r="50"></circle>
+						<circle style="fill: var(--primary-color-compliment);"  cx="51" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-compliment-light);" cx="161" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-compliment-dark);"  cx="51" cy="161" r="50"></circle>
+						<circle style="fill: var(--primary-color-compliment-neutral);" cx="161" cy="161" r="50"></circle>>
 					</svg>
 				</picture>
 			</figure>
@@ -100,12 +101,12 @@
 			<figure>
 				<figcaption>Tetrad 1 Color and Variants</figcaption>
 				<picture>
-					<svg height="350" width="300"> 
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213 213" width="225" height="225"> 
 						<style>circle { stroke: #999; stroke-width: 2px; }</style>
-						<circle style="fill: var(--primary-color-tetrad1);" cx="100" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad1-light);" cx="250" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad1-dark);" cx="100" cy="250" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad1-neutral);" cx="250" cy="250" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad1);" cx="51" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad1-light);" cx="161" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad1-dark);" cx="51" cy="161" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad1-neutral);" cx="161" cy="161" r="50"></circle>
 					</svg>
 				</picture>
 			</figure>
@@ -113,22 +114,28 @@
 			<figure>
 				<figcaption>Tetrad 2 Color and Variants</figcaption>
 				<picture>
-					<svg height="350" width="300"> 
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213 213" width="225" height="225"> 
 						<style>circle { stroke: #999; stroke-width: 2px; }</style>
-						<circle style="fill: var(--primary-color-tetrad2);" cx="100" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad2-light);" cx="250" cy="100" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad3-dark);" cx="100" cy="250" r="50"></circle>
-						<circle style="fill: var(--primary-color-tetrad4-neutral);" cx="250" cy="250" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad2);" cx="51" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad2-light);"  cx="161" cy="51" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad2-dark);"  cx="51" cy="161" r="50"></circle>
+						<circle style="fill: var(--primary-color-tetrad2-neutral);" cx="161" cy="161" r="50"></circle> 
 					</svg>
 				</picture>
 			</figure>
 
-			<input type="color" id="colorPicker" />
+
 		</section>
 
 		<section id="typography">
 			<h2>Typography</h2>
+			
+			<p><blockquote>This is a quotation in a blockquote: <q>Someone said something, once.</q> 
+				<cite>&mdash; supposedly</cite> <!-- the spec says you're not supposed to put the cite in the block but I think that's nonsense -->
+			</blockquote></p>
+
 			<p>This is a paragraph with inline elements. It has <del>deletions</del> and <s>strike-throughs</s>, <ins>insertions</ins> and <u>underlined text</u>. Some text is <em>emphasized</em> or <i>italicized</i>, other text is <strong>strong</strong> or <b>bold</b>. Some text is <mark>marked</mark>. There are <abbr title="abbreviations">abbr</abbr> and <dfn>definitions</dfn>. <small>(Small text is small.)</small></p>
+
 
 			<p><pre>This is pre-       
 			styled text.</pre></p>
@@ -144,10 +151,6 @@
 			<p>File your <span>complaints</span> at this address:
 			<address>100 NotReal Ln<br>Fakeville, OZ 99999<br><a href="mailto:">mail@noone.fake</a></address>
 			</p>
-
-			<blockquote>This is a quotation in a blockquote: <q>Someone said something, once.</q> 
-				<cite>--supposedly</cite>
-			</blockquote>
 
 			<h3>Right-To-Left Languages</h3>
 			"This is Arabic" using the bi-directional isolate tag &lt;bdi&gt;: <bdi>هذا باللغة العربية</bdi><br>

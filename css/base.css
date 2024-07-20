@@ -55,25 +55,29 @@ footer {
 /* Image Elements */
 
 figure {
-	display: inline-flex;
-	flex-wrap: wrap;
-;
+	border: 1px solid #CCC; 
+	border-radius: .5em;
+	display: inline-grid;
+	justify-content: center;
+	margin: 1em;
+	padding: 1em;
 }
 
 figcaption {
-
-	display: inline-flex;
-	flex-wrap: wrap;
+	display: inline-grid;
 	font-weight: bold;
+	justify-content: center;
+	padding: .25em;
 	text-align: center;
 	width: 100%;
 }
 
 picture, img {
-	display: inline-flex;
-	flex-wrap: wrap;
+	display: inline-grid;
+	justify-content: center;
 	max-width: 100vw;
 	max-height: 100vh;
+	width: 100%;
 }
 
 hr {
@@ -84,6 +88,7 @@ hr {
 /* Elements: Headings */ 
 
 h1, h2, h3, h4, h5, h6 {
+	color: var(--primary-color-dark);
 	font-family: Roboto, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	line-height: 1.5em;
@@ -107,9 +112,12 @@ p {	margin: .5em 0; }
 
 blockquote {
 	background-color: light-dark(var(--primary-color-dark), var(--primary-color-light));
+	border-radius: .25em;
 	color: var(--text-color-inverse);
-	margin: 2em 1em;
+	margin: 0 1em 0 0;
 	padding: .5em;
+	float: inline-start;
+	width: 20vw;
 }
 
 ul, ol, dl {
@@ -217,11 +225,19 @@ header {
 		column-count: 2;
 		display: grid;
 		aside {
+			align-items: start;
 			grid-column: 2;
-			background-color: light-dark(var(--primary-color-light), var(--primary-color-dark));
-			border-radius: .3em;
-			color: var(--bg-color);
-			padding: 1em;
+			grid-row: 1;
+			grid-row-end: 12; /* how can we make this automagic? */
+			nav {
+				background-color: light-dark(var(--primary-color-light), var(--primary-color-dark));
+				border-radius: .3em;
+				color: var(--bg-color);
+				margin: 1em;
+				padding: 1em;
+				position: sticky;
+				top: 1em;
+			}
 			menu>li>a{
 				color: var(--bg-color);
 				text-decoration: none;
@@ -229,6 +245,7 @@ header {
 		}
 		section {
 			grid-column: 1;
+			grid-auto-rows: auto;
 		}
 	}
 
