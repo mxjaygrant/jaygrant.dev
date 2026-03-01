@@ -1,88 +1,240 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/base.css">
-    <style>
-        :root{
-            --deColor: blue;
-        }
-        
-        .colors {
-            border: 1px solid green;
-            height: 10em;
-            width: 10em;
-            background-color: var(--deColor);
-        }
+	<script src="js/base.js"></script>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		:root{
+			--deColor: blue;
+			--primary-color-darker: lch(from var(--primary-color) calc(l - 7) calc(c + 5) h);
+		}
+		
+		.colors {
+			border: 1px solid green;
+			height: 10em;
+			width: 10em;
+			background-color: var(--deColor);
+		}
 
-        form {
-            margin: 2rem auto;
-        }
+		form {
+			margin: 2rem auto;
+		}
 
-        input {
-            margin: 10px;
-            font-size: 1.5em;
-            text-size-adjust: 125%;
-        }
+		input {
+			margin: 10px;
+			font-size: 1.5em;
+			text-size-adjust: 125%;
+		}
 
-        input[type="radio"] {
-            height: 2em;
-            width: 2em;
-        }
+		input[type="radio"] {
+			height: 2em;
+			width: 2em;
+		}
 
-        #red:clicked ~ .colors {
-           --deColor: red;
-        }
-        #green:checked ~ .colors {
-           --deColor: green !important;
-        }
-        #purple:checked ~ .colors {
-           --deColor: purple !important;
-        }
+		#red:clicked ~ .colors {
+		   --deColor: red;
+		}
+		#green:checked ~ .colors {
+		   --deColor: green !important;
+		}
+		#purple:checked ~ .colors {
+		   --deColor: purple !important;
+		}
 
-        .select:active ~ .colors {
-            --deColor: yellow;
-            }
+		.select:active ~ .colors {
+			--deColor: yellow;
+			}
 
-    </style>
+
+
+		body>header{
+			background-image: 
+			linear-gradient(180deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(200deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(220deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(240deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(260deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(280deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(300deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(320deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(340deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(360deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(180deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(200deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(220deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(240deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(260deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(280deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(300deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(320deg, transparent 50%, var(--primary-color-darker) 50%),
+			linear-gradient(340deg, transparent 50%, var(--primary-color) 50%),
+			linear-gradient(360deg, transparent 50%, var(--primary-color-darker) 50%);
+			background-color: var(--primary-color);
+			background-size: 100% 200%;
+			overflow: visible;
+			padding: 1rem 0 0;
+			nav {
+				border-top: 5px solid var(--primary-color-darker);
+				background-color: var(--primary-color);
+			}
+			svg {
+				height: 20vh;
+				.stop-1 {
+					stop-color: var(--primary-color-compliment-light);
+				}
+				.stop-2 {
+					stop-color: var(--primary-color-compliment);
+				}
+				.stop-3 {
+					stop-color: var(--primary-color-compliment-dark);
+				}
+			}
+		}
+		section {
+				padding: 1rem 0;
+			}
+	</style>
 </head>
 <body>
-    <main>
-    <section>
-        <h1>Welcome to my Lab!</h1>
-        <p>This is the page where I work out different concepts. Nothing here is guaranteed to stay, but pull up a chair and enjoy the view!</p>
-    </section>
+	<header>
+		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg width="100%" height="100%" viewBox="0 0 1492 368" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+			<defs>
+					<linearGradient id="test" x1="0" x2="0" y1="0" y2="1">
+					<stop offset="0%" class="stop-1"  />
+					<stop offset="100%"class="stop-2" />
+					</linearGradient>
+		
+					<style>
+					text {
+						font-family: Satisfy, cursive;
+						font-size: 130px; 
+						fill: url(#test); 
+						filter: drop-shadow(0px 0px 10px gray);	
+					}
+				</style>
+			</defs>
+			<g transform="matrix(1,0,0,1,-144.418,-643.705)">
+				<g>
+					<g transform="matrix(0.790173,-0.612883,0.612883,0.790173,-559.459,335.924)">
+						<text x="210.871px" y="985.025px">J</text>
+					</g>
+					<g transform="matrix(0.827582,-0.561344,0.561344,0.827582,-485.307,310.245)">
+						<text x="262.383px" y="945.136px">a</text>
+					</g>
+					<g transform="matrix(0.850101,-0.52662,0.52662,0.850101,-434.548,299.869)">
+						<text x="309.47px" y="913.252px">y</text>
+					</g>
+					<g transform="matrix(0.893792,-0.448482,0.448482,0.893792,-348.016,265.215)">
+						<text x="385.95px" y="867.386px">G</text>
+					</g>
+					<g transform="matrix(0.918536,-0.395337,0.395337,0.918536,-291.679,248.591)">
+						<text x="457.356px" y="832.042px">r</text>
+					</g>
+					<g transform="matrix(0.937833,-0.347086,0.347086,0.937833,-250.055,225.959)">
+						<text x="505.755px" y="811.027px">a</text>
+					</g>
+					<g transform="matrix(0.954664,-0.297684,0.297684,0.954664,-210.182,202.195)">
+						<text x="558.739px" y="791.148px">n</text>
+					</g>
+					<g transform="matrix(0.967328,-0.253527,0.253527,0.967328,-175.935,181.467)">
+						<text x="616.111px" y="773.345px">t</text>
+					</g>
+					<g transform="matrix(0.97297,-0.230933,0.230933,0.97297,-158.643,171.667)">
+						<text x="653.993px" y="763.513px">:</text>
+					</g>
+					<g transform="matrix(0.988989,-0.147987,0.147987,0.988989,-102.994,114.576)">
+						<text x="718.467px" y="749.419px">I</text>
+					</g>
+					<g transform="matrix(0.997205,-0.0747143,0.0747143,0.997205,-53.0362,60.9148)">
+						<text x="787.645px" y="739.319px">n</text>
+					</g>
+					<g transform="matrix(0.999686,-0.0250717,0.0250717,0.999686,-18.1596,21.4759)">
+						<text x="847.367px" y="734.932px">t</text>
+					</g>
+					<g transform="matrix(0.999778,0.0210665,-0.0210665,0.999778,15.6525,-18.5169)">
+						<text x="886.702px" y="733.662px">e</text>
+					</g>
+					<g transform="matrix(0.997698,0.0678156,-0.0678156,0.997698,51.9647,-61.7248)">
+						<text x="935.122px" y="734.521px">r</text>
+					</g>
+					<g transform="matrix(0.993268,0.115835,-0.115835,0.993268,92.1581,-109.433)">
+						<text x="987.631px" y="738.205px">f</text>
+					</g>
+					<g transform="matrix(0.985665,0.168711,-0.168711,0.985665,140.079,-163.074)">
+						<text x="1029.69px" y="742.799px">a</text>
+					</g>
+					<g transform="matrix(0.975662,0.21928,-0.21928,0.975662,191.387,-219.767)">
+						<text x="1085.72px" y="752.293px">c</text>
+					</g>
+					<g transform="matrix(0.964518,0.264016,-0.264016,0.964518,241.455,-271.774)">
+						<text x="1131.85px" y="762.435px">e</text>
+					</g>
+					<g transform="matrix(0.939581,0.342326,-0.342326,0.939581,342.298,-367.894)">
+						<text x="1213.37px" y="785.762px">E</text>
+					</g>
+					<g transform="matrix(0.917376,0.398021,-0.398021,0.917376,427.598,-441.562)">
+						<text x="1277.36px" y="809.148px">n</text>
+					</g>
+					<g transform="matrix(0.896397,0.443253,-0.443253,0.896397,507.224,-504.332)">
+						<text x="1332.47px" y="832.878px">g</text>
+					</g>
+					<g transform="matrix(0.878086,0.478503,-0.478503,0.878086,580.245,-558.485)">
+						<text x="1386.13px" y="859.464px">i</text>
+					</g>
+					<g transform="matrix(0.861366,0.507985,-0.507985,0.861366,641.624,-598.651)">
+						<text x="1417.6px" y="876.199px">n</text>
+					</g>
+					<g transform="matrix(0.840524,0.541774,-0.541774,0.840524,725.531,-651.456)">
+						<text x="1469.33px" y="906.664px">e</text>
+					</g>
+					<g transform="matrix(0.822274,0.569092,-0.569092,0.822274,799.186,-693.585)">
+						<text x="1510.05px" y="932.732px">e</text>
+					</g>
+					<g transform="matrix(0.804994,0.593283,-0.593283,0.804994,871.887,-732.271)">
+						<text x="1549.87px" y="960.173px">r</text>
+					</g>
+				</g>
+			</g>
+		</svg>
+		
+		<nav>
+			<menu>
+				<li><a href="framework.html">Framework</a></li>
+				<li><a href="lab.html">Labs</a></li>
+				<li><a href="index.html">Home</a></li>
+			</menu>
+		</nav>
+	</header>
 
-<!--     <section>
-        <button name="scheme" value="red" id="red">Red</button><label for="red">red</label>
-        <button name="scheme" value="green" id="green">Green</button><label for="green">green</label>
-        <button name="scheme" value="purple" id="purple">Purple</button><label for="purple">purple</label>
+	<main>
+	<aside>
+		<p><button onclick="switchColorTheme();" title="Switch Theme">Switch Light/Dark</button></p>
+		<p><input type="color" id="colorPicker" /><label for="colorPicker">Change Theme Color</label></p>
+	</aside>
 
-        <div class="select">red</div>
+	<section>
+		<h1>Welcome to my Lab!</h1>
+		<p>This is the page where I work out different concepts. Nothing here is guaranteed to stay, but pull up a chair and enjoy the view!</p>
+		<br>
+	</section>
 
-         <div class="colors" id="colors">&nbsp;</div>
-    </section>  -->
 
-<!--     <section>
-        <img src="images/logoform.svg" height="200">
+    <!-- <section>
+		<button name="scheme" value="red" id="red">Red</button><label for="red">red</label>
+		<button name="scheme" value="green" id="green">Green</button><label for="green">green</label>
+		<button name="scheme" value="purple" id="purple">Purple</button><label for="purple">purple</label>
 
-        <img src="images/logoform.png"> 
-    </section> -->
+		<div class="select">red</div>
 
-    <section>
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <!-- to hide the path, it is usually wrapped in a <defs> element -->
-            <!-- <defs> -->
-            <path
-              id="MyPath"
-              fill="none"
-              stroke="red"
-              d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
-            <!-- </defs> -->
-          
-            <text>
-              <textPath href="#MyPath">Quick brown fox jumps over the lazy dog.</textPath>
-            </text>
-          </svg>
-    </section>
+		 <div class="colors" id="colors">&nbsp;</div>
+	</section>  -->
+
+     <section style="">
+		<img src="images/logoform.svg" height="200" style="width: 200px; display: inline;">
+		<img src="images/logoform.png" height="200" width="200" style="width: 200px;">
+	</section> 
 </main>
 </body>
 </html>

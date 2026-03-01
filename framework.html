@@ -6,16 +6,15 @@
 	<script src="/js/base.js"></script>
 </head>
 <body>
-	<header>
+	<header class="starburst--top">
 		<h1>Big Fancy Header!</h1>
 		<nav>
 			<menu>
-				<li><a href="#">Nav 1</a></li>
-				<li><a href="#">Nav 2</a></li>
-				<li><a href="#">Nav 3</a></li>
+				<li><a href="framework.html">Framework</a></li>
+				<li><a href="lab.html">Labs</a></li>
+				<li><a href="index.html">Home</a></li>
 			</menu>
-			
-			
+		</nav>
 	</header>
 	<main>
 		<article>
@@ -46,7 +45,7 @@
 			</hgroup>
 	
 			<p>This page represents 113 non-depreciated tags in HTML, as per <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network's HTML web docs</a>. Some representation of visual content based on Bootstrap's cheatsheet.</p>
-			<p>The only tag not represented is the generic container tag &lt;div&gt;. CSS specificity allows me to avoid the generic container entirely, allowing a nearly clean slate to build upon.</p>
+			<p>The only tag not represented is the generic container tag &lt;div&gt;. CSS specificity allows me to avoid the generic container entirely, giving a nearly clean slate to build upon.</p>
 			<p>I end up rewriting the same CSS and HTML every project and it's time to turn it into my own framework.</p>
 			
 			<h4>Assumptions</h4>
@@ -170,7 +169,7 @@
 			<h2>Headings</h2>
 
 			<h1>Heading 1</h1>
-			<h2 style="border: none;">Heading 2</h2> <!-- sloppy but effective-->
+			<h2 style="text-decoration: none;">Heading 2</h2> <!-- sloppy but effective-->
 			<h3>Heading 3</h3>
 			<h4>Heading 4</h4>
 			<h5>Heading 5</h5>
@@ -330,7 +329,7 @@
 
 			  <object></object>
 
-			  <canvas></canvas>
+
 
 		</section>
 		<section>
@@ -340,12 +339,16 @@
 				title="Inline Frame Example"
 				width="300"
 				height="200"
-				src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+				src="">
 			</iframe>
 
+			<p>object</p>
 			<object></object>
 
-			<canvas></canvas>
+			<p>canvas</p>
+			<canvas width="120" height="120">
+				This is just a placeholder. There is nothing on this canvas.
+			</canvas>
 
 			<noscript></noscript>
 		</section>
@@ -472,8 +475,6 @@
   Text
 
   Media
-  "object",
-  "canvas",
   "noscript",
 
   Tables

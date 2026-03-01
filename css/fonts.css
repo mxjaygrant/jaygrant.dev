@@ -1,0 +1,14 @@
+@font-face {
+	font-family: Roboto;
+	src: local('Roboto'), url('/fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+	font-family: Lato;
+	src: local('Lato'), url('/fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: Satisfy;
+	src: local('Satisfy'), url('/fonts/Satisfy/Satisfy-Regular.ttf');
+}
